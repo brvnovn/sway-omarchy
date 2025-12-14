@@ -40,7 +40,7 @@ waybar/
 
 ### Módulo de Bateria
 
-O módulo de bateria exibe informações da bateria e, ao passar o mouse sobre ele, mostra o perfil de energia atual (Performance, Balanced ou Power Saver).
+O módulo de bateria exibe informações da bateria. O tooltip tenta mostrar o perfil de energia atual (Performance, Balanced ou Power Saver), mas note que o Waybar pode não executar comandos shell diretamente no tooltip-format. Se o perfil não aparecer no tooltip, você pode verificar o perfil atual usando o módulo `custom/power-profile` ou executando `powerprofilesctl get` no terminal.
 
 ### Módulo de Brilho
 
