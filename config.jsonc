@@ -7,14 +7,14 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
   "modules-center": [ "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
-    "clock",
+    "battery",
     "group/tray-expander",
-    "bluetooth",
     "network",
     "pulseaudio",
     "custom/brightness",
     "cpu",
-    "battery"
+    "battery",
+    "clock"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -90,9 +90,9 @@
       "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
     "format-full": "󰂅",
-    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%\nPower Profile: $(~/.config/waybar/scripts/battery-with-profile-tooltip.sh)",
-    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%\nPower Profile: $(~/.config/waybar/scripts/battery-with-profile-tooltip.sh)",
-    "tooltip-format-plugged": "{capacity}%\nPower Profile: $(~/.config/waybar/scripts/battery-with-profile-tooltip.sh)",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "tooltip-format-plugged": "{capacity}%",
     "interval": 5,
     "on-click": "omarchy-menu power",
     "states": {
@@ -130,12 +130,6 @@
   "custom/expand-icon": {
     "format": "",
     "tooltip": false
-  },
-  "custom/power-profile": {
-    "exec": "~/.config/waybar/scripts/battery-with-profile-tooltip.sh",
-    "interval": 5,
-    "tooltip": false,
-    "format": ""
   },
   "custom/brightness": {
     "exec": "~/.config/waybar/scripts/brightness.sh",
