@@ -7,10 +7,9 @@ INTERNAL_MONITOR="eDP-1"
 MONITOR_INFO=$(hyprctl monitors -j 2>/dev/null | jq -r ".[] | select(.name == \"$INTERNAL_MONITOR\")" 2>/dev/null)
 
 if [ -z "$MONITOR_INFO" ]; then
-    # Monitor está desativado, ativar
-    # Primeiro, obter a configuração original do monitor (se disponível)
-    # Se não houver configuração salva, usar valores padrão
-    hyprctl keyword monitor "$INTERNAL_MONITOR,preferred,auto,1" 2>/dev/null
+    # Monitor está desativado, ativar com configuração padrão
+    # Usar a configuração original: preferred, auto, 1.2 (conforme monitors.conf)
+    hyprctl keyword monitor "$INTERNAL_MONITOR,preferred,auto,1.2" 2>/dev/null
 else
     # Monitor está ativo, desativar
     hyprctl keyword monitor "$INTERNAL_MONITOR,disable" 2>/dev/null
