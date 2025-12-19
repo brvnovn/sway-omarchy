@@ -36,7 +36,8 @@
 #custom-omarchy,
 #custom-screenrecording-indicator,
 #custom-update,
-#custom-brightness {
+#custom-brightness,
+#custom-internal-monitor {
   min-width: 12px;
   margin: 0 7.5px;
 }
@@ -86,4 +87,8 @@ tooltip {
 
 #custom-screenrecording-indicator.active {
   color: #a55555;
+}
+
+#custom-internal-monitor.disabled {
+  opacity: 0.5;
 }

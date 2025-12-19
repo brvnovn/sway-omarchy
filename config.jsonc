@@ -7,13 +7,13 @@
   "modules-left": ["custom/omarchy", "hyprland/workspaces"],
   "modules-center": [ "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
-    "battery",
     "group/tray-expander",
+    "battery",
+    "custom/internal-monitor",
     "network",
     "pulseaudio",
     "custom/brightness",
     "cpu",
-    "battery",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -138,6 +138,14 @@
     "on-scroll-up": "brightnessctl set +5%",
     "on-scroll-down": "brightnessctl set 5%-",
     "tooltip": true
+  },
+  "custom/internal-monitor": {
+    "exec": "~/.config/waybar/scripts/internal-monitor.sh",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "~/.config/waybar/scripts/toggle-internal-monitor.sh",
+    "tooltip": true,
+    "signal": 1
   },
   "custom/screenrecording-indicator": {
     "on-click": "omarchy-cmd-screenrecord",
