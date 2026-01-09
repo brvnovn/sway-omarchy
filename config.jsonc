@@ -9,11 +9,10 @@
   "modules-right": [
     "group/tray-expander",
     "battery",
+    "custom/brightness",
     "custom/internal-monitor",
     "network",
     "pulseaudio",
-    "custom/brightness",
-    "cpu",
     "clock"
   ],
   "hyprland/workspaces": {
@@ -35,10 +34,7 @@
     },
     "persistent-workspaces": {
       "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      "2": []
     }
   },
   "custom/omarchy": {
